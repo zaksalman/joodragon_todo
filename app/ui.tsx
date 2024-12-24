@@ -5,6 +5,7 @@ import Todo from "./components/todo";
 import { useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { createTodo, getTodos } from "actions/todo-actions";
+import Image from "next/image";
 
 export default function UI() {
   const [searchInput, setSearchInput] = useState("");
@@ -26,7 +27,8 @@ export default function UI() {
 
   return (
     <div className="w-2/3 mx-auto flex flex-col items-center py-10 gap-2">
-      <h1 className="text-xl">하주용의 해야할 일</h1>
+      <Image src="/logo.png" width={150} height={150} alt="logo" />
+      <h1 className="text-xl">주용이의 해야 할 일</h1>
       <Input
         label="해야할 일 검색"
         placeholder="해야할 일 검색"
