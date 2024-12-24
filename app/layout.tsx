@@ -23,11 +23,12 @@ export default function RootLayout({ children }) {
           referrerPolicy="no-referrer"
         />
       </head>
-      <ReactQueryClientProvider>
-        <ThemeProvider>
-          <body className={inter.className}>{children}</body>
-        </ThemeProvider>
-      </ReactQueryClientProvider>
+
+      <body className={inter.className}>
+        <ReactQueryClientProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </ReactQueryClientProvider>
+      </body>
     </html>
   );
 }
